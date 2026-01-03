@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("Welcome to the simple calculator");
+        var inp=Number(prompt("Enter 1st number"));
+        var inp2=Number(prompt("Enter 2nd number"));
+        var op=prompt("Enter operation (+, -, *, /, %)");
+        if(isNaN(inp) || isNaN(inp2)){
+            document.write("Invalid input. Please enter numeric values.");
+        }
+        else{
+            switch(op){
+                case "+":
+                    document.write((inp+inp2));
+                    break;
+                case "-":
+                    document.write((inp-inp2));
+                    break;
+                case "*":
+                    document.write((inp*inp2));
+                    break;
+                case "%":
+                    document.write((inp%inp2));
+                    break;
+                case "/":
+                    if(inp2===0){
+                        document.write("Error: Division by zero");
+                    }
+                    else{
+                        document.write((inp/inp2));
+                    }
+                    break;
+                default:
+                    document.write("Invalid operation");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("welcome to the guess game");
+        alert("You have to 3 attempts to guess the correct number between 0 to 9");
+        var userGuess=prompt("Enter a number between 0 to 9");
+        var randomNumber=Math.floor(Math.random()*10);
+        if(userGuess==randomNumber){
+            alert("Congratulations! You guessed the correct number: " + randomNumber);
+        }
+        else{
+            var attempts=2;
+            while(attempts>0){
+                userGuess=prompt("Wrong guess! You have " + attempts + " attempts left. Try again:");
+                if(userGuess==randomNumber){
+                    alert("Congratulations! You guessed the correct number: " + randomNumber);
+                    break;
+                }
+                attempts--;
+            }
+            if(attempts==0){
+                alert("Sorry, you've used all your attempts. The correct number was: " + randomNumber);
+            }
+        }
+    </script>
+</body>
+</html>
